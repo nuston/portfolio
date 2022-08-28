@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(250, 241, 241);
+}
+
+h2{
+    padding: 0px;
+    
+}
+.name {
+    margin: 0px;
+    padding: 0px;
+    color: blue;
+    font-size: larger;
+
+}
+.aftername{
+    margin-top: 0px;
+    padding: 0px;
+    color: black;
+    font-size: larger;
+}
+. {
+text-decoration: none;
+}
+.content1 {
+    display: flex;
+}
+.image {
+    height: 100%;
+    width: 10%;
+    margin: 5px;
+    padding: 10px;
+}
+
