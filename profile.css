@@ -1,5 +1,6 @@
 body {
-    background-color: rgb(250, 241, 241);
+    font-family: "poppins", sans-serif;
+    background-color: rgb(252,251,244);
 }
 
 h2{
@@ -25,10 +26,39 @@ text-decoration: none;
 .content1 {
     display: flex;
 }
-.image {
+.img1 {
     height: 100%;
     width: 10%;
     margin: 5px;
     padding: 10px;
 }
-
+.about{
+    margin: 8.5%;
+    text-decoration: none;
+}
+.skills {
+    margin: 8.5%;
+    text-decoration: none;
+    padding: 5px;
+}
+.ps {
+    margin-left: 5.8%;
+}
+.work {
+    margin: 8.5%;
+    text-decoration: none;
+    padding: 5px;
+}
+.img2 {
+    height: 100%;
+    width: 10%;
+    margin-left: 5.2%;
+    margin-right: 5.2%;
+   display: block;
+    
+}
+.name2 {
+    margin-left: 38px;
+    font-size: large;
+    font-weight: bolder;
+}
