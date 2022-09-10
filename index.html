@@ -1,72 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="profile.css" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap%27);">
-    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<title>Portfolio</title>
+<link rel="stylesheet" href="portfolio_copy2.css">
+ <!-- FontAwesome needed -->
+
 </head>
 
 <body>
-   <b> <h2>Hi,</h2>
-    <p>I'am <strong class="name">Nur</strong> <br> <span class="aftername">Software Developer</span>  </p>
-    <div class="content1">  
+	<div class="container">
+		<div class="navigation">
+			<ul>
+				<li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+				<li><a href="#about" onclick="toggleMenu();">About</a></li>
+				<li><a href="#services" onclick="toggleMenu();">Services</a></li>
+				<li><a href="#projects" onclick="toggleMenu();">Projects</a></li>
+				<li><a href="#testimonials" onclick="toggleMenu();">Testimonials</a></li>
+				<li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+			</ul>
+			<div class="themeSwitch">
 
-   <div> 
+			</div>
+		</div>
+		<div class="main">
+			<div class="topbar">
+				<a href="#" class="logo">Portfolio</a>
+				<div class="toggle">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</div>
+			</div>
 
-    <span><a href="#" style="text-decoration:none">Contacts</a></span> 
-       <p> <a href="#"><i class="fa fa-twitter"></i></a></p>
-       <p> <a href="#"><i class="fa fa-facebook"></i></a></p>
-       <p> <a href="#"><i class="fa fa-linkedin-square"></i></a></p>
-       <p> <a href="#"><i class="fa fa-instagram"></i></a></p>
+			<!-- banner -->
+			<section class="banner" id="banner">
+				<div class="content">
+					<div class="imgBox">
+						<img
+              src="image/coporateME.jpg">
+          </div>
+						<h3>Oloruntele Nur</h3>
+						<p>I'm a Creative Software Developer</p>
+						<a href="#" class="btn">Download My CV</a>
+						<ul class="socialMedia">
+							<li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+			</section>
 
-    </div>
-<img  class="img1" src="image/Mee.JPG" alt="Me">
-    <div>
+			<!-- About -->
+			<section class="about adjust" id="about">
+				<div class="title">
+					<h2>About Me</h2>
+				</div>
+				<div class="content">
+					<div class="textBox">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit finibus nisl. Donec
+							non tempus augue. Nullam
+							metus lorem, convallis non tempus et, aliquet ac nisl. Aliquam eget nisl ipsum. Nam
+							pellentesque augue justo, vitae
+							mollis enim malesuada sit amet. Duis ultricies est non sollicitudin ultrices. Integer sit
+							amet mi laoreet, pellentesque
+							ligula id, imperdiet massa. s.<br><br>
+              
+              sem. Vivamus malesuada nunc.</p>
+					</div>
+					<div class="imageBox">
+						<img
+              src="image/Mee.JPG">
+          </div>
+					</div>
+			</section>
 
-    </div>
+			<!-- Services -->
+			<section class="services adjust" id="services">
+				<div class="title">
+					<h2>Our Services</h2>
+					<p>Our services includes providing top quality and user interactive  website for our clients</p>
+				</div>
+				<div class="content">
+					<div class="serviceBox">
+						<img src="https://img.icons8.com/cotton/64/000000/web-design--v2.png" />
+						<h2>Web Design</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit finibus nisl. Donec
+							non tempus augue. Nullam
+							metus lorem, convallis non tempus et, aliquet ac nisl. </p>
+					</div>
+					<div class="serviceBox">
+						<img src="https://img.icons8.com/cotton/64/000000/code.png" />
+						<h2>Web Development</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit finibus nisl. Donec
+							non tempus augue. Nullam
+							metus lorem, convallis non tempus et, aliquet ac nisl. </p>
+					</div>
+					<div class="serviceBox">
+						<img src="https://img.icons8.com/cotton/64/000000/touchscreen-smartphone--v3.png" />
+						<h2>Android Apps</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit finibus nisl. Donec
+							non tempus augue. Nullam
+							metus lorem, convallis non tempus et, aliquet ac nisl. </p>
+					</div>
+					<div class="serviceBox">
+						<img src="https://img.icons8.com/cotton/64/000000/image--v1.png" />
+						<h2>Photography</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit finibus nisl. Donec
+							non tempus augue. Nullam
+							metus lorem, convallis non tempus et, aliquet ac nisl. </p>
+					</div>
+					<div class="serviceBox">
+						<img src="https://img.icons8.com/cotton/64/000000/multi-edit.png" />
+						<h2>Content Writing</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit finibus nisl. Donec
+							non tempus augue. Nullam
+							metus lorem, convallis non tempus et, aliquet ac nisl. </p>
+					</div>
+					<div class="serviceBox">
+						<img src="https://img.icons8.com/cotton/64/000000/web-player.png" />
+						<h2>Video Editing</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit finibus nisl. Donec
+							non tempus augue. Nullam
+							metus lorem, convallis non tempus et, aliquet ac nisl. </p>
+					</div>
+				</div>
 
-    </div>
-    <div>
-       <p> <a class="about" href="#">About</a> </p> 
-    <img  class="img2" src="image/Mee.JPG" alt="Me">
-    <p class="name2">I'am Oloruntele Nurudeen</p>
-        <div>
-       <span>Lorem ipsum dolor, sit amet consectetur <br>
-         adipisicing elit. Voluptas ipsum doloribus, <br>
-        facilis voluptate molestias similique <br>
-         a aliquam? Saepe, quibusdam minus!</span>
-        </div>
+			</section>
 
-          
-        </div>
-        <div>
-        <p ><a class="skills" href="#">Skills</a></p>
-        <p class="ps">Professional Skills</p> 
-            <div>
-         <span>Lorem ipsum dolor, sit amet consectetur <br>
-           adipisicing elit. Voluptas ipsum doloribus, <br>
-          facilis voluptate molestias similique <br>
-           a aliquam? Saepe, quibusdam minus!</span>
-           </div>
-           </div>
-    <div>
-           <p ><a class="work" href="#">Work</a></p> 
-        
-       
-
-            <div>
-           <p>Lorem ipsum dolor, sit amet consectetur <br>
-            adipisicing elit. Voluptas ipsum doloribus, <br>
-           facilis voluptate molestias similique <br>
-            a aliquam? Saepe, quibusdam minus!</p>
-        </div>
-        </div>
+			<!-- Projects -->
+			<section class="projects adjust" id="projects">
+				<div class="title">
+					<h2>Recent Work</h2>
+					<p>Morbi at semper nulla. Proin vel porta odio. Mauris ut consectetur libero.</p>
+				</div>
+				<div class="content">
+					<div class="workBox">
+						<div class="imageBox">
+							<img
+                            <img
+                            src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80">
+                        </div>
+                                                                        <div class="textBox">
+                                                                            <h3>Project 09</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                        </section>
             
-           
-            <div></div>
-</body>
-</html>
+                        <!-- Testimonials -->
+                        <section class="testimonials adjust" id="testimonials">
+                            <div class="title">
+                                <h2>Testimonials</h2>
+                                <p>Morbi at semper nulla. Proin vel porta odio. Mauris ut consectetur libero.</p>
+                            </div>
+                            <div class="content">
+                                <div class="testimonialsBox">
+                                    <div class="imageBox">
+                                        <img
+                            src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80">
+                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit finibus nisl.
+                                            Donec
+                                            non tempus augue. Nullam
+                                            metus lorem, convallis non tempus et, aliquet ac nisl.</p>
+                                        <h4>Someone Famous<br><span>Website Designer</span></h4>
+                                    </div>
+                                    <div class="testimonialsBox">
+                                        <div class="imageBox">
+                                            <img
+                            src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80">
+                        </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit finibus
+                                                nisl. Donec
+                                                non tempus augue. Nullam
+                                                metus lorem, convallis non tempus et, aliquet ac nisl.</p>
+                                            <h4>Someone Famous<br><span>Website Designer</span></h4>
+                                        </div>
+                                        <div class="testimonialsBox">
+                                            <div class="imageBox">
+                                                <img
+                            src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80">
+                        </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit finibus
+                                                    nisl. Donec
+                                                    non tempus augue. Nullam
+                                                    metus lorem, convallis non tempus et, aliquet ac nisl.</p>
+                                                <h4>Someone Famous<br><span>Website Designer</span></h4>
+                                            </div>
+                                            <div class="testimonialsBox">
+                                                <div class="imageBox">
+                                                    <img
+                            src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80">
+                        </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit
+                                                        finibus nisl. Donec
+                                                        non tempus augue. Nullam
+                                                        metus lorem, convallis non tempus et, aliquet ac nisl.</p>
+                                                    <h4>Someone Famous<br><span>Website Designer</span></h4>
+                                                </div>
+                                            </div>
+                        </section>
+            
+                        <!-- Contact -->
+                        <section class="contact adjust" id="contact">
+                            <div class="title">
+                                <h2>Let's Say Hi</h2>
+                                <p>Morbi at semper nulla. Proin vel porta odio. Mauris ut consectetur libero.</p>
+                            </div>
+                            <div class="content">
+                                <div class="contactForm">
+                                    <div class="row">
+                                        <input type="text" name="" placeholder="First Name">
+                                        <input type="text" name="" placeholder="Last Name">
+                        </div>
+                                        <div class="row">
+                                            <input type="text" name="" placeholder="Email Address">
+                                            <input type="text" name="" placeholder="Mobile No.">
+                        </div>
+                                            <div class="row2">
+                                                <textarea placeholder="Message"></textarea>
+                                            </div>
+                                            <div class="row2">
+                                                <input type="submit" value="Send">
+                        </div>
+                                            </div>
+                                        </div>
+                        </section>
+
+                        <!--footer-->
+                        
+            
+                        <!-- Copyright -->
+                        <div class="copyright">
+                            <p>Copyright 2021 Because Yes. All rights non reserved.</p>
+                            <script>let toggle = document.querySelector(".toggle");
+                                let topbar = document.querySelector(".topbar");
+                                let navigation = document.querySelector(".navigation");
+                                let main = document.querySelector(".main");
+                                let themeSwitch = document.querySelector(".themeSwitch");
+                                let body = document.querySelector("body"); 
+                                
+                                toggle.onclick = function () {
+                                  toggle.classList.toggle('active');
+                                  topbar.classList.toggle('active');
+                                  navigation.classList.toggle('active');
+                                  main.classList.toggle('active');
+                                }
+                                
+                                themeSwitch.onclick = function(){
+                                  body.classList.toggle('dark');
+                                }
+                                
+                                function toggleMenu(){
+                                
+                                  let navigation = document.querySelector(".navigation");
+                                  let main = document.querySelector(".main");
+                                
+                                  navigation.classList.remove('active');
+                                  main.classList.remove('active');
+                                  
+                                }
+                                </script>
