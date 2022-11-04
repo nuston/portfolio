@@ -28,6 +28,7 @@
 body
 {
   overflow-x:hidden;
+ 
 }
 
  body.dark{
@@ -49,8 +50,8 @@ body
   border-right: 1px solid rgba(0,0,0,0.05);
   background: var(--white2);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   overflow: hidden;
   transition: width 0.5s, left 0.5s;
 }
@@ -98,6 +99,7 @@ body
 
 .navigation ul li a:hover
 {
+    color: aquamarine;
   opacity: 1;
 }
 
@@ -163,7 +165,7 @@ border-bottom: 1px solid rgba(0,0,0,0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 30px;
   color: var(--black);
 }
 
@@ -176,7 +178,7 @@ section
 .banner
 {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   padding: 0 20px;
 }
@@ -189,7 +191,7 @@ section
   justify-content: center;
 }
 
-.banner .imgBox
+.banner .imgBox 
 {
   position: relative;
   width: 300px;
@@ -335,6 +337,8 @@ p
 .about .content .imageBox
 {
   margin-left: 40px;
+  
+  
 }
 
 .about .content .imageBox img
