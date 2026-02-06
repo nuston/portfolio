@@ -4,212 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nurudeen Oloruntele | Data Analytics Portfolio</title>
-  <meta name="description" content="Data analytics portfolio: operations, sales, delivery performance, and social media sentiment analysis." />
-
-  <style>
-    :root{
-      --bg:#0b1220;
-      --panel:#0f1a30;
-      --text:#e8eefc;
-      --muted:#b8c4e6;
-      --border:rgba(232,238,252,.12);
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 18px;
-    }
-
-    *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; }
-    body{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background:
-        radial-gradient(900px 600px at 20% 10%, rgba(104, 190, 255, .18), transparent 55%),
-        radial-gradient(900px 600px at 90% 20%, rgba(185, 104, 255, .16), transparent 55%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a{ color: inherit; text-decoration: none; }
-    a:hover{ text-decoration: underline; }
-
-    .container{ width: min(1100px, 92vw); margin: 0 auto; }
-
-    .site-header{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(11,18,32,.75);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: 14px 0;
-      gap: 16px;
-    }
-    .logo{ font-weight: 700; letter-spacing: .2px; }
-    .nav{ display:flex; gap: 14px; align-items:center; flex-wrap: wrap; }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(232,238,252,.12);
-      border: 1px solid var(--border);
-    }
-    .btn:hover{ text-decoration:none; background: rgba(232,238,252,.18); }
-    .btn.ghost{ background: transparent; }
-    .btn.small{ padding: 8px 12px; font-size: .95rem; }
-
-    .hero{ padding: 56px 0 18px; }
-    .hero-inner{
-      display:grid;
-      grid-template-columns: 1.25fr .85fr;
-      gap: 22px;
-      align-items:start;
-    }
-    .eyebrow{ color: var(--muted); margin: 0 0 10px; }
-    h1{ font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 0 0 12px; }
-    .lead{ color: var(--muted); font-size: 1.05rem; margin: 0 0 18px; }
-    .hero-cta{ display:flex; gap: 10px; flex-wrap: wrap; }
-
-    .hero-card{
-      background: rgba(15,26,48,.9);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow);
-    }
-    .hero-card h2{ margin: 0 0 10px; font-size: 1.15rem; }
-    .checklist{ margin: 0; padding-left: 18px; color: var(--muted); }
-
-    .quick-stats{
-      margin-top: 18px;
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 10px;
-    }
-    .stat{
-      background: rgba(15,26,48,.6);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px;
-    }
-    .stat-num{ font-weight: 700; }
-    .stat-label{ color: var(--muted); font-size: .92rem; }
-
-    .section{ padding: 44px 0; }
-    .section.alt{
-      background: rgba(15,26,48,.35);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .section-head{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-    .section-head h2{ margin: 0; font-size: 1.55rem; }
-    .muted{ color: var(--muted); }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .card{
-      background: rgba(15,26,48,.8);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow);
-      display:flex;
-      flex-direction:column;
-      gap: 12px;
-    }
-    .card-top h3{ margin: 0 0 6px; line-height: 1.2; }
-
-    .tags{ display:flex; flex-wrap: wrap; gap: 8px; }
-    .tag{
-      font-size: .85rem;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(232,238,252,.08);
-      color: var(--muted);
-      display:inline-flex;
-      align-items:center;
-      gap: 8px;
-    }
-    /* Make tool badges clickable */
-    .tag.link{ cursor: pointer; }
-    .tag.link:hover{
-      background: rgba(232,238,252,.18);
-      text-decoration: none;
-      color: var(--text);
-    }
-
-    .bullets{ margin: 0; padding-left: 18px; color: var(--muted); }
-    .actions{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
-
-    .note{
-      margin-top: 14px;
-      padding: 12px 14px;
-      border: 1px dashed rgba(232,238,252,.25);
-      border-radius: 14px;
-    }
-
-    .skill-grid{ display:flex; flex-wrap: wrap; gap: 10px; }
-    .pill{
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(15,26,48,.65);
-      border: 1px solid var(--border);
-      color: var(--muted);
-    }
-
-    .about{
-      background: rgba(15,26,48,.55);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
-    }
-
-    .contact-card{
-      background: rgba(15,26,48,.7);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .footer{
-      margin-top: 18px;
-      padding-top: 10px;
-      border-top: 1px solid var(--border);
-      text-align:center;
-    }
-
-    @media (max-width: 860px){
-      .hero-inner{ grid-template-columns: 1fr; }
-      .grid{ grid-template-columns: 1fr; }
-      .section-head{ flex-direction:column; align-items:flex-start; }
-      .quick-stats{ grid-template-columns: 1fr; }
-    }
-  </style>
+  <meta name="description" content="Data analytics portfolio: operations, sales, delivery performance, and social media monitoring." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#top">Nurudeen Oloruntele</a>
+
       <nav class="nav">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -224,10 +27,9 @@
       <div class="container hero-inner">
         <div>
           <p class="eyebrow">Data Analyst • SQL • Python • Power BI • Excel</p>
-          <h1>Turning messy data into clear decisions.</h1>
+          <h1>Data analytics projects — clear, practical, recruiter-friendly.</h1>
           <p class="lead">
-            I build dashboards, analyses, and data workflows that help teams improve performance,
-            reduce delays, and understand customers.
+            I analyse business data to uncover insights, improve operations, and support decision-making.
           </p>
 
           <div class="hero-cta">
@@ -238,11 +40,11 @@
           <div class="quick-stats">
             <div class="stat">
               <div class="stat-num">4</div>
-              <div class="stat-label">Portfolio projects</div>
+              <div class="stat-label">Projects</div>
             </div>
             <div class="stat">
               <div class="stat-num">Ops + Sales</div>
-              <div class="stat-label">Business focus</div>
+              <div class="stat-label">Focus</div>
             </div>
             <div class="stat">
               <div class="stat-num">Dashboards</div>
@@ -252,16 +54,13 @@
         </div>
 
         <div class="hero-card">
-          <h2>Featured work</h2>
+          <h2>What you’ll find</h2>
           <ul class="checklist">
-            <li>Social media sentiment & reputation monitoring</li>
-            <li>Order fulfilment backlog & bottleneck analysis</li>
-            <li>Customer sales performance insights</li>
-            <li>Delivery operations efficiency analysis</li>
+            <li>Short summaries (problem → approach → outcome)</li>
+            <li>Direct links to full project repos</li>
+            <li>Space for tool badges (Python/SQL/Power BI/Excel) once file links are added</li>
           </ul>
-          <p class="muted" style="margin-top:12px;">
-            Click the tool badges (Python / SQL / Power BI / Excel) on each project to open the actual files.
-          </p>
+          <p class="muted">Click “Open Project” to view each project on GitHub.</p>
         </div>
       </div>
     </section>
@@ -270,139 +69,93 @@
       <div class="container">
         <div class="section-head">
           <h2>Projects</h2>
-          <p class="muted">At-a-glance summaries + clickable artifacts.</p>
+          <p class="muted">Open each project to view the work.</p>
         </div>
 
-        <!--
-          IMPORTANT: Put your real files in your repo and update these links.
-
-          Recommended folder structure:
-          assets/projects/brand-sentiment/...
-          assets/projects/order-fulfilment/...
-          assets/projects/sales-analysis/...
-          assets/projects/delivery-ops/...
-
-          Examples of files you can link:
-          - .ipynb (Python notebook)
-          - .py (Python script)
-          - .sql (SQL queries)
-          - .xlsx (Excel workbook)
-          - .pbix (Power BI file)  NOTE: downloads; not viewable in browser unless Power BI Service link.
-          - .png (dashboard screenshot)
-        -->
-
         <div class="grid">
-          <!-- PROJECT 1 -->
+
+          <!-- Project 1 -->
           <article class="card">
             <div class="card-top">
-              <h3>Social Media Sentiment Analysis for Brand Reputation Monitoring</h3>
-              <p class="muted">NLP + analytics workflow to track sentiment, topics, and engagement trends.</p>
-            </div>
-
-            <div class="tags">
-              <a class="tag link" href="assets/projects/brand-sentiment/sentiment.ipynb" target="_blank" rel="noreferrer">Python</a>
-              <a class="tag link" href="assets/projects/brand-sentiment/queries.sql" target="_blank" rel="noreferrer">SQL</a>
-              <!-- If you have a Power BI Service link, replace this with that URL -->
-              <a class="tag link" href="assets/projects/brand-sentiment/dashboard.png" target="_blank" rel="noreferrer">Power BI</a>
+              <h3>Social Media Monitoring for Brand Reputation</h3>
+              <p class="muted">Monitoring sentiment, engagement trends, and topics to support brand reputation decisions.</p>
             </div>
 
             <ul class="bullets">
-              <li>Cleaned and structured social content into analysis-ready datasets.</li>
-              <li>Measured sentiment and surfaced drivers behind changes (topics/keywords).</li>
-              <li>Created visuals for monitoring and stakeholder reporting.</li>
+              <li>Prepared social media datasets for analysis.</li>
+              <li>Surfaced sentiment shifts and what drove them.</li>
+              <li>Presented insights in a clear, stakeholder-friendly format.</li>
             </ul>
 
             <div class="actions">
-              <a class="btn small" href="assets/projects/brand-sentiment/README.html" target="_blank" rel="noreferrer">Case Study</a>
-              <a class="btn small ghost" href="https://github.com/nuston" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn small" href="https://github.com/nuston/enhancing-brand-reputation" target="_blank" rel="noreferrer">Open Project</a>
+              <a class="btn small ghost" href="https://github.com/nuston/enhancing-brand-reputation" target="_blank" rel="noreferrer">Repo</a>
             </div>
           </article>
 
-          <!-- PROJECT 2->
+          <!-- Project 2 -->
           <article class="card">
             <div class="card-top">
-              <h3>Order Fulfilment Optimization Using Operational Data Analysis</h3>
-              <p class="muted">Identified bottlenecks and delay drivers to reduce backlog and improve flow.</p>
-            </div>
-
-            <div class="tags">
-              <a class="tag link" href="assets/projects/order-fulfilment/fulfilment_queries.sql" target="_blank" rel="noreferrer">SQL</a>
-              <a class="tag link" href="assets/projects/order-fulfilment/fulfilment_analysis.xlsx" target="_blank" rel="noreferrer">Excel</a>
-              <!-- Optional: link to a Python script/notebook if you used it -->
-              <a class="tag link" href="assets/projects/order-fulfilment/fulfilment_analysis.ipynb" target="_blank" rel="noreferrer">Python</a>
+              <h3>Order Fulfilment Optimisation (Backlog Reduction)</h3>
+              <p class="muted">Bottleneck analysis to reduce backlog and improve fulfilment speed.</p>
             </div>
 
             <ul class="bullets">
-              <li>Measured cycle time per stage and pinpointed bottlenecks.</li>
-              <li>Segmented backlog by priority, location, and time-to-ship.</li>
-              <li>Recommended evidence-based changes (capacity + scheduling).</li>
+              <li>Measured cycle time across fulfilment stages.</li>
+              <li>Identified backlog drivers by segment and time window.</li>
+              <li>Recommended improvements for capacity and scheduling.</li>
             </ul>
 
             <div class="actions">
-              <a class="btn small" href="assets/projects/order-fulfilment/README.html" target="_blank" rel="noreferrer">Case Study</a>
-              <a class="btn small ghost" href="https://github.com/nuston" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn small" href="https://github.com/nuston/order_fulfilment-optimisation" target="_blank" rel="noreferrer">Open Project</a>
+              <a class="btn small ghost" href="https://github.com/nuston/order_fulfilment-optimisation" target="_blank" rel="noreferrer">Repo</a>
             </div>
           </article>
 
-          <!-- PROJECT 3 -->
+          <!-- Project 3 -->
           <article class="card">
             <div class="card-top">
-              <h3>Customer Sales Performance Analysis Dashboard</h3>
-              <p class="muted">Interactive view of revenue trends, customer behaviour, and product performance.</p>
-            </div>
-
-            <div class="tags">
-              <!-- Power BI PBIX will download unless you replace with a Power BI Service report link -->
-              <a class="tag link" href="assets/projects/sales-analysis/sales_dashboard.pbix" target="_blank" rel="noreferrer">Power BI</a>
-              <a class="tag link" href="assets/projects/sales-analysis/sales_model.sql" target="_blank" rel="noreferrer">SQL</a>
-              <a class="tag link" href="assets/projects/sales-analysis/sales_workbook.xlsx" target="_blank" rel="noreferrer">Excel</a>
-              <a class="tag link" href="https://github.com/nuston/customer-sales-analysis" target="_blank" rel="noreferrer">Python</a>
+              <h3>Customer Sales Analysis</h3>
+              <p class="muted">Insights into revenue trends, customer behaviour, and product performance.</p>
             </div>
 
             <ul class="bullets">
-              <li>Built KPIs (revenue, growth, AOV, repeat rate) with drilldowns.</li>
-              <li>Identified top segments and products driving performance.</li>
-              <li>Designed a clean dashboard layout for quick interpretation.</li>
+              <li>Built KPIs and segment breakdowns.</li>
+              <li>Highlighted best-selling products and key customers.</li>
+              <li>Created visuals to support fast decisions.</li>
             </ul>
 
             <div class="actions">
-              <a class="btn small" href="assets/projects/sales-analysis/README.html" target="_blank" rel="noreferrer">Case Study</a>
-              <a class="btn small ghost" href="https://github.com/nuson" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn small" href="https://github.com/nuston/customer-sales-analysis" target="_blank" rel="noreferrer">Open Project</a>
+              <a class="btn small ghost" href="https://github.com/nuston/customer-sales-analysis" target="_blank" rel="noreferrer">Repo</a>
             </div>
           </article>
 
           <!-- Project 4 -->
           <article class="card">
             <div class="card-top">
-              <h3>Delivery Operations Performance & Efficiency Analysis</h3>
-              <p class="muted">Analysed delivery KPIs to improve reliability, reduce delays, and increase throughput.</p>
-            </div>
-
-            <div class="tags">
-              <a class="tag link" href="assets/projects/delivery-ops/delivery_ops.sql" target="_blank" rel="noreferrer">SQL</a>
-              <a class="tag link" href="assets/projects/delivery-ops/delivery_ops.xlsx" target="_blank" rel="noreferrer">Excel</a>
-              <a class="tag link" href="assets/projects/delivery-ops/delivery_ops.ipynb" target="_blank" rel="noreferrer">Python</a>
-              <!-- Optional screenshot/report -->
-              <a class="tag link" href="https://github.com/nuston/Delivery-operation-analysis" target="_blank" rel="noreferrer">Report</a>
+              <h3>Delivery Operations Analysis</h3>
+              <p class="muted">Delivery performance insights focused on efficiency, delays, and reliability.</p>
             </div>
 
             <ul class="bullets">
-              <li>Measured on-time rate, lead time, and delay reasons by region/route.</li>
-              <li>Flagged outliers affecting KPIs (partners, time windows, routes).</li>
-              <li>Shared targeted recommendations to improve performance.</li>
+              <li>Analysed on-time delivery rate and lead times.</li>
+              <li>Flagged delay drivers by route/region/time window.</li>
+              <li>Recommended process improvements based on evidence.</li>
             </ul>
 
             <div class="actions">
-              <a class="btn small" href="assets/projects/delivery-ops/README.html" target="_blank" rel="noreferrer">Case Study</a>
-              <a class="btn small ghost" href="https://github.com/nuston" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn small" href="https://github.com/nuston/Delivery-operation-analysis" target="_blank" rel="noreferrer">Open Project</a>
+              <a class="btn small ghost" href="https://github.com/nuston/Delivery-operation-analysis" target="_blank" rel="noreferrer">Repo</a>
             </div>
           </article>
+
         </div>
 
         <div class="note">
           <p class="muted">
-            ✅ To make the tool badges open real files, upload your artifacts into the <strong>assets/projects/...</strong>
-            folders and keep the filenames exactly the same as in the links above (or edit the links to match your filenames).
+            Next step: send me the direct links to your files (e.g., notebook, .sql, .xlsx, .pbix, dashboard screenshot),
+            and I’ll add clickable tool badges under each project.
           </p>
         </div>
       </div>
@@ -412,7 +165,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Skills</h2>
-          <p class="muted">Tools I use to deliver end-to-end analytics.</p>
+          <p class="muted">Core tools and analytics strengths.</p>
         </div>
 
         <div class="skill-grid">
@@ -422,9 +175,8 @@
           <div class="pill">Excel</div>
           <div class="pill">Data Cleaning</div>
           <div class="pill">Dashboard Design</div>
-          <div class="pill">KPI Design</div>
           <div class="pill">Operations Analytics</div>
-          <div class="pill">Text Analytics (NLP)</div>
+          <div class="pill">Customer Analytics</div>
         </div>
       </div>
     </section>
@@ -437,12 +189,8 @@
 
         <div class="about">
           <p>
-            I’m <strong>Nurudeen Oloruntele</strong>, a Data Analyst focused on translating business questions into
-            dashboards, analyses, and actionable recommendations. My work covers operations, sales,
-            and customer insights using SQL, Python, and Power BI.
-          </p>
-          <p class="muted" style="margin: 0;">
-            Add your CV link and your preferred industry (e.g., retail, logistics, fintech) if you want.
+            I’m <strong>Nurudeen Oloruntele</strong>, a Data Analyst focused on turning business data into actionable insights.
+            I work across operations and customer/sales analytics using SQL, Python, Power BI, and Excel.
           </p>
         </div>
       </div>
@@ -456,13 +204,11 @@
         </div>
 
         <div class="contact-card">
-          <!-- Replace these with your real links -->
+          <!-- Replace these two when ready -->
           <p><strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a></p>
           <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noreferrer">Add your LinkedIn URL</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/nuston" target="_blank" rel="noreferrer">github.com/nuston</a></p>
 
-          <!-- Optional: CV PDF in your repo, e.g. assets/Nurudeen_Oloruntele_CV.pdf -->
-          <p><strong>CV:</strong> <a href="assets/Nurudeen_Oloruntele_CV.pdf" target="_blank" rel="noreferrer">Download PDF</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/nuston" target="_blank" rel="noreferrer">github.com/nuston</a></p>
         </div>
 
         <footer class="footer">
@@ -472,9 +218,6 @@
     </section>
   </main>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
