@@ -59,6 +59,7 @@ a:hover{ text-decoration: underline; }
   border-radius: 999px;
   background: rgba(232,238,252,.12);
   border: 1px solid var(--border);
+  cursor: pointer;
 }
 
 .btn:hover{
@@ -103,7 +104,6 @@ h1{
 }
 
 .hero-card h2{ margin: 0 0 10px; font-size: 1.15rem; }
-
 .checklist{ margin: 0; padding-left: 18px; color: var(--muted); }
 
 .quick-stats{
@@ -161,13 +161,64 @@ h1{
 
 .card-top h3{ margin: 0 0 6px; line-height: 1.2; }
 
-.bullets{ margin: 0; padding-left: 18px; color: var(--muted); }
+.tags{ display:flex; flex-wrap: wrap; gap: 8px; }
+
+.tag{
+  font-size: .85rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(232,238,252,.08);
+  color: var(--muted);
+}
 
 .actions{
   display:flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: auto;
+  margin-top: 4px;
+}
+
+.details{
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.details-nav{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.details-nav a{
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(232,238,252,.06);
+  text-decoration: none;
+}
+
+.details-nav a:hover{
+  background: rgba(232,238,252,.12);
+}
+
+.details-section h4{
+  margin: 12px 0 6px;
+  color: var(--text);
+}
+
+.details-section p{
+  margin: 0 0 8px;
+}
+
+.details-links{
+  margin-top: 12px;
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .note{
