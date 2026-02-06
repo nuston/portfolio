@@ -1,166 +1,238 @@
-<!DOCTYPE html>
-<html lang="es">
-
+<!doctype html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
-	<meta name="viewport"
-		content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
-	<title>Portfolio</title>
-<link rel="stylesheet" href="portfolio.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
- <!-- FontAwesome needed -->
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nurudeen Oloruntele | Data Analyst Portfolio</title>
+  <meta name="description" content="Data analytics portfolio: operations, sales, delivery performance, and social media sentiment analysis." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-	<div class="container">
-		<div class="navigation">
-			<ul>
-				<li><a href="#banner" onclick="toggleMenu();">Home</a></li>
-				<li><a href="#about" onclick="toggleMenu();">About</a></li>
-				<li><a href="#services" onclick="toggleMenu();">Services</a></li>
-				<li><a href="#projects" onclick="toggleMenu();">Projects</a></li>
-				<li><a href="#testimonials" onclick="toggleMenu();">Testimonials</a></li>
-				<li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
-			</ul>
-			<div class="themeSwitch">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top">Nurudeen Oloruntele</a>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-			</div>
-		</div>
-		<div class="main">
-			<div class="topbar">
-				<a href="#" class="logo">Portfolio</a>
-				<div class="toggle">
-					<i class="fa fa-bars" aria-hidden="true"></i>
-				</div>
-			</div>
-            
-			<!-- banner -->
-			<section class="banner" id="banner">
-				<div class="content">
-					<div class="imgBox">
-						<img
-              src="image/coporateME.jpg">
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow">Data Analyst • SQL • Python • Power BI</p>
+          <h1>Turning messy data into clear decisions.</h1>
+          <p class="lead">
+            I build dashboards, analyses, and data workflows that help teams improve performance, reduce delays,
+            and understand customers.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
           </div>
-						<h3>Oloruntele Nur</h3>
-						<p>I'm a data analyst</p>
-						<a href="https://drive.google.com/file/d/18Oxi3rerU8eYu-wnEdN26om8agGTHqoT/view?usp=drivesdk"
-						   class="btn">Download My CV</a>
-						<ul class="socialMedia">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						</ul>
-                    
-					</div>
-			</section>
 
-			<!-- About -->
-			<section class="about adjust" id="about">
-				<div class="title">
-					<h2>About Me</h2>
-				</div>
-				<div class="content">
-					<div class="textBox">
-						<p>I’m Nurudeen Oloruntele, a Data Analyst focused on transforming business data into actionable insights.
-							I specialise in operational analytics, customer behaviour analysis, and dashboard storytelling using SQL, 
-							Python, and Power BI.<br><br>
-              
-              nustonpay dev.</p>
-					</div>
-					<div class="imageBox">
-						<img
-              src="image/webpics3.webp">
+          <div class="quick-stats">
+            <div class="stat">
+              <div class="stat-num">4</div>
+              <div class="stat-label">End-to-end projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">Ops + Sales</div>
+              <div class="stat-label">Business focus</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">Dashboards</div>
+              <div class="stat-label">Power BI / Excel</div>
+            </div>
           </div>
-					</div>
-			</section>
+        </div>
 
-			
+        <div class="hero-card">
+          <h2>Featured work</h2>
+          <ul class="checklist">
+            <li>Social media sentiment & reputation monitoring</li>
+            <li>Order fulfilment backlog & bottleneck analysis</li>
+            <li>Customer sales performance insights</li>
+            <li>Delivery operations efficiency analysis</li>
+          </ul>
+          <p class="muted">Tip: add GitHub + dashboard links to each project card below.</p>
+        </div>
+      </div>
+    </section>
 
-			<!-- PROJECTS -->
-			<div class="project-card">
-  <h3>Social Media Sentiment Analysis for Brand Reputation Monitoring</h3>
-  <p>
-  Built a data analytics workflow to monitor brand sentiment across social media.
-  Performed text analysis and visualised engagement trends to support marketing decisions.
-  </p>
-  <p><strong>Tools:</strong> Python, NLP, Power BI</p>
-  <a href="#">View Project</a>
-</div>
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p class="muted">Recruiter-friendly summaries with links to full work.</p>
+        </div>
 
-<div class="project-card">
-  <h3>Order Fulfilment Optimization Using Operational Data Analysis</h3>
-  <p>
-  Analysed fulfilment workflow data to identify delays and bottlenecks.
-  Delivered actionable insights to reduce backlog and improve efficiency.
-  </p>
-  <p><strong>Tools:</strong> Excel, SQL, Data Modelling</p>
-  <a href="#">View Project</a>
-</div>
+        <div class="grid">
+          <!-- Project 1 -->
+          <article class="card">
+            <div class="card-top">
+              <h3>Social Media Sentiment Analysis for Brand Reputation Monitoring</h3>
+              <p class="muted">NLP + analytics pipeline to track sentiment, topics, and engagement trends.</p>
+            </div>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Text Analytics</span>
+            </div>
+            <ul class="bullets">
+              <li>Collected and cleaned social content for analysis-ready datasets.</li>
+              <li>Measured sentiment and surfaced drivers (topics/keywords) behind shifts.</li>
+              <li>Built visuals for trend monitoring and stakeholder reporting.</li>
+            </ul>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">Case Study</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
 
-<div class="project-card">
-  <h3>Customer Sales Performance Analysis Dashboard</h3>
-  <p>
-  Developed an interactive dashboard to track revenue trends, customer behaviour,
-  and product performance for strategic decision-making.
-  </p>
-  <p><strong>Tools:</strong> Power BI, Data Cleaning</p>
-  <a href="#">View Project</a>
-</div>
+          <!-- Project 2 -->
+          <article class="card">
+            <div class="card-top">
+              <h3>Order Fulfilment Optimization Using Operational Data Analysis</h3>
+              <p class="muted">Identified bottlenecks and delay drivers to reduce backlog and improve flow.</p>
+            </div>
+            <div class="tags">
+              <span class="tag">SQL</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Process Analytics</span>
+              <span class="tag">KPIs</span>
+            </div>
+            <ul class="bullets">
+              <li>Mapped fulfilment stages and measured cycle time by step.</li>
+              <li>Segmented backlog by location, priority, and time-to-ship.</li>
+              <li>Recommended changes based on evidence (capacity + scheduling).</li>
+            </ul>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">Case Study</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
 
-<div class="project-card">
-  <h3>Delivery Operations Performance & Efficiency Analysis</h3>
-  <p>
-  Analysed delivery timelines and operational KPIs to identify inefficiencies
-  and recommend process improvements.
-  </p>
-  <p><strong>Tools:</strong> SQL, Excel, Data Visualisation</p>
-  <a href="#">View Project</a>
-</div>
+          <!-- Project 3 -->
+          <article class="card">
+            <div class="card-top">
+              <h3>Customer Sales Performance Analysis Dashboard</h3>
+              <p class="muted">Interactive view of revenue, product performance, and customer behaviour.</p>
+            </div>
+            <div class="tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">DAX</span>
+              <span class="tag">Data Cleaning</span>
+              <span class="tag">Storytelling</span>
+            </div>
+            <ul class="bullets">
+              <li>Built KPIs (revenue, growth, AOV, repeat rate) with drilldowns.</li>
+              <li>Identified top segments and products driving performance.</li>
+              <li>Designed visuals for quick stakeholder interpretation.</li>
+            </ul>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">Dashboard</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
 
-            
-                        <!-- Contact -->
-                        <section class="contact adjust" id="contact">
-                            <div class="title">
-                                <h2>Let's Say Hi</h2>
-                                <p>Morbi at semper nulla. Proin vel porta odio. Mauris ut consectetur libero.</p>
-                            </div>
-                            <div class="content">
-                                <div class="contactForm">
-                                    <div class="row">
-                                        <input type="text" name="" placeholder="First Name">
-                                        <input type="text" name="" placeholder="Last Name">
-                        </div>
-                                        <div class="row">
-                                            <input type="text" name="" placeholder="Email Address">
-                                            <input type="text" name="" placeholder="Mobile No.">
-                        </div>
-                                            <div class="row2">
-                                                <textarea placeholder="Message"></textarea>
-                                            </div>
-                                            <div class="row2">
-                                                <input type="submit" value="Send">
-                        </div>
-                                            </div>
-                                        </div>
-				to pay for our services and products click here
-				<div> <a href="https://www.flutterwave.com/pay/nustonpay4pr3" class="link1">make payment</a> 
-				</div>
-                        </section>
+          <!-- Project 4 -->
+          <article class="card">
+            <div class="card-top">
+              <h3>Delivery Operations Performance & Efficiency Analysis</h3>
+              <p class="muted">Analysed delivery KPIs to improve on-time performance and reduce delays.</p>
+            </div>
+            <div class="tags">
+              <span class="tag">SQL</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Operations</span>
+              <span class="tag">Visualization</span>
+            </div>
+            <ul class="bullets">
+              <li>Measured on-time rate, lead time, and delay reasons by region.</li>
+              <li>Flagged outliers (routes, partners, time windows) impacting KPIs.</li>
+              <li>Shared recommendations to improve reliability and throughput.</li>
+            </ul>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">Case Study</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
+        </div>
 
-                        <!--footer-->
-                        
-            
-                        <!-- Copyright -->
-                        <div class="copyright">
-                            <p>Copyright 2021 Nuston group of company.</p>
+        <div class="note">
+          <p class="muted">
+            Replace the <strong>#</strong> links with your real GitHub repos / Power BI links / write-ups.
+            If you don’t have case studies yet, we can create simple project pages next.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <section id="skills" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p class="muted">Tools I use to deliver end-to-end analytics.</p>
+        </div>
 
+        <div class="skill-grid">
+          <div class="pill">SQL</div>
+          <div class="pill">Python</div>
+          <div class="pill">Power BI</div>
+          <div class="pill">Excel</div>
+          <div class="pill">Data Cleaning</div>
+          <div class="pill">Dashboard Design</div>
+          <div class="pill">KPI Design</div>
+          <div class="pill">Operations Analytics</div>
+          <div class="pill">Text Analytics (NLP)</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>About</h2>
+        </div>
+        <div class="about">
+          <p>
+            I’m <strong>Nurudeen Oloruntele</strong>, a Data Analyst focused on translating business questions into
+            data products—dashboards, analyses, and actionable recommendations. My work covers operations, sales,
+            and customer insights using SQL, Python, and Power BI.
+          </p>
+          <p class="muted">
+            Want a one-page CV link here? Add it in the Contact section.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="muted">Best way to reach me.</p>
+        </div>
+
+        <div class="contact-card">
+          <p><strong>Email:</strong> <a href="oloruntelenurudeen4@gmail.com.com">oloruntelenurudeen4@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noreferrer">Add your LinkedIn URL</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/nuston" target="_blank" rel="noreferrer">github.com/nuston</a></p>
+        </div>
+
+        <footer class="footer">
+          <p class="muted">© <span id="year"></span> Nurudeen Oloruntele</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
-                   <script src="port.js"></script>        
-
-
-
+</html>
