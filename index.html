@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nurudeen Oloruntele | Data Analytics Portfolio</title>
   <meta name="description" content="Data analytics portfolio: operations, sales, delivery performance, and social media monitoring." />
-  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -48,19 +48,19 @@
             </div>
             <div class="stat">
               <div class="stat-num">Dashboards</div>
-              <div class="stat-label">Power BI / Excel</div>
+              <div class="stat-label">PDF / BI</div>
             </div>
           </div>
         </div>
 
         <div class="hero-card">
-          <h2>What you’ll find</h2>
+          <h2>How to use this page</h2>
           <ul class="checklist">
-            <li>Short summaries (problem → approach → outcome)</li>
-            <li>Direct links to full project repos</li>
-            <li>Space for tool badges (Python/SQL/Power BI/Excel) once file links are added</li>
+            <li>Skim the project cards</li>
+            <li>Click <strong>Project details</strong> to expand the full write-up</li>
+            <li>Open dashboard PDFs and repo links inside each project</li>
           </ul>
-          <p class="muted">Click “Open Project” to view each project on GitHub.</p>
+          <p class="muted">This is designed for quick recruiter scanning.</p>
         </div>
       </div>
     </section>
@@ -69,84 +69,152 @@
       <div class="container">
         <div class="section-head">
           <h2>Projects</h2>
-          <p class="muted">Open each project to view the work.</p>
+          <p class="muted">Each project has an expandable “Project details” section.</p>
         </div>
 
         <div class="grid">
 
           <!-- Project 1 -->
-          <article class="card">
+          <article class="card" id="p1">
             <div class="card-top">
-              <h3>Social Media Monitoring for Brand Reputation</h3>
-              <p class="muted">Monitoring sentiment, engagement trends, and topics to support brand reputation decisions.</p>
+              <h3>Enhancing Brand Reputation with Cutting-Edge Social Media Monitoring</h3>
+              <p class="muted">
+                Social data analytics framework to monitor brand health, detect issues early, and guide response strategies.
+              </p>
             </div>
 
-            <ul class="bullets">
-              <li>Prepared Transaction & Customer Intelligence Dashboard.</li>
-              <li>Surfaced sentiment shifts and what drove them.</li>
-              <li>Presented insights in a clear, stakeholder-friendly format.</li>
-            </ul>
+            <div class="tags">
+              <span class="tag">Social Listening</span>
+              <span class="tag">Sentiment</span>
+              <span class="tag">Dashboard</span>
+            </div>
 
             <div class="actions">
-              <a class="btn small" href="https://github.com/nuston/enhancing-brand-reputation" target="_blank" rel="noreferrer">Open Project</a>
-              <a class="btn small ghost" href="https://github.com/nuston/enhancing-brand-reputation" target="_blank" rel="noreferrer">Project Detail</a>
+              <button class="btn small toggle-details" data-target="p1-details" type="button">Project details</button>
+              <a class="btn small ghost" href="https://github.com/nuston/enhancing-brand-reputation" target="_blank" rel="noreferrer">GitHub repo</a>
+              <!-- Replace this href with your real PDF path -->
+              <a class="btn small ghost" href="assets/dashboards/afritech_brand_monitoring_dashboard.pdf" target="_blank" rel="noreferrer">Dashboard (PDF)</a>
+            </div>
+
+            <div class="details" id="p1-details" hidden>
+              <div class="details-nav">
+                <a href="#p1-context">Business Context</a>
+                <a href="#p1-purpose">Purpose</a>
+                <a href="#p1-outcomes">Expected Outcomes</a>
+              </div>
+
+              <section class="details-section" id="p1-context">
+                <h4>Business Context</h4>
+                <p>
+                  AfriTech Electronics competes in a saturated consumer-electronics market where brand perception directly drives sales.
+                  Recent surges in negative online sentiment and product recall controversies risk long-term brand erosion.
+                  This project empowers AfriTech to harness social data analytics to monitor brand health, address issues swiftly,
+                  and protect customer loyalty through real-time digital awareness.
+                </p>
+              </section>
+
+              <section class="details-section" id="p1-purpose">
+                <h4>Purpose of Project</h4>
+                <p>The purpose of the project is to establish a robust, data-driven social media monitoring framework that enhances AfriTech’s ability to:</p>
+                <ul>
+                  <li>Track and understand customer sentiment.</li>
+                  <li>Respond to emerging issues before they escalate.</li>
+                  <li>Strengthen customer trust through responsiveness and transparency.</li>
+                  <li>Enable executives to make strategic marketing and product decisions rooted in real insights.</li>
+                </ul>
+              </section>
+
+              <section class="details-section" id="p1-outcomes">
+                <h4>Expected Outcomes</h4>
+                <ul>
+                  <li><strong>Improved Brand Reputation:</strong> Early detection and mitigation of negative trends.</li>
+                  <li><strong>Enhanced Customer Engagement:</strong> Targeted response strategies improving satisfaction and retention.</li>
+                  <li><strong>Faster Crisis Response:</strong> Automated alerts reducing escalation time.</li>
+                  <li><strong>Data-Driven Insights:</strong> Visual dashboards guiding marketing and support strategies.</li>
+                  <li><strong>Competitive Advantage:</strong> Continuous benchmarking ensuring market leadership.</li>
+                </ul>
+              </section>
+
+              <div class="details-links">
+                <a class="btn small" href="https://github.com/nuston/enhancing-brand-reputation" target="_blank" rel="noreferrer">Open GitHub repo</a>
+                <!-- Replace this href with your real PDF path -->
+                <a class="btn small ghost" href="assets/dashboards/afritech_brand_monitoring_dashboard.pdf" target="_blank" rel="noreferrer">Open dashboard PDF</a>
+              </div>
             </div>
           </article>
 
           <!-- Project 2 -->
-          <article class="card">
+          <article class="card" id="p2">
             <div class="card-top">
-              <h3>Order Fulfilment Optimisation (Backlog Reduction)</h3>
-              <p class="muted">Bottleneck analysis to reduce backlog and improve fulfilment speed.</p>
+              <h3>Eliminating Backlogs with Optimisation of Order Fulfilment</h3>
+              <p class="muted">Operations analysis focused on bottlenecks, backlog drivers, and workflow optimisation.</p>
             </div>
 
-            <ul class="bullets">
-              <li>Measured cycle time across fulfilment stages.</li>
-              <li>Identified backlog drivers by segment and time window.</li>
-              <li>Recommended improvements for capacity and scheduling.</li>
-            </ul>
+            <div class="tags">
+              <span class="tag">Operations</span>
+              <span class="tag">Process</span>
+              <span class="tag">KPIs</span>
+            </div>
 
             <div class="actions">
-              <a class="btn small" href="https://github.com/nuston/order_fulfilment-optimisation" target="_blank" rel="noreferrer">Open Project</a>
-              <a class="btn small ghost" href="https://github.com/nuston/order_fulfilment-optimisation" target="_blank" rel="noreferrer">Repo</a>
+              <button class="btn small toggle-details" data-target="p2-details" type="button">Project details</button>
+              <a class="btn small ghost" href="https://github.com/nuston/order_fulfilment-optimisation" target="_blank" rel="noreferrer">GitHub repo</a>
+            </div>
+
+            <div class="details" id="p2-details" hidden>
+              <p class="muted">
+                Add your “Business Context / Purpose / Outcomes / Dashboard” here (same structure as Project 1).
+              </p>
             </div>
           </article>
 
           <!-- Project 3 -->
-          <article class="card">
+          <article class="card" id="p3">
             <div class="card-top">
               <h3>Customer Sales Analysis</h3>
-              <p class="muted">Insights into revenue trends, customer behaviour, and product performance.</p>
+              <p class="muted">Sales performance insights: trends, customer behaviour, and product performance.</p>
             </div>
 
-            <ul class="bullets">
-              <li>Built KPIs and segment breakdowns.</li>
-              <li>Highlighted best-selling products and key customers.</li>
-              <li>Created visuals to support fast decisions.</li>
-            </ul>
+            <div class="tags">
+              <span class="tag">Sales</span>
+              <span class="tag">Customers</span>
+              <span class="tag">Insights</span>
+            </div>
 
             <div class="actions">
-              <a class="btn small" href="https://github.com/nuston/customer-sales-analysis" target="_blank" rel="noreferrer">Open Project</a>
-              <a class="btn small ghost" href="https://github.com/nuston/customer-sales-analysis" target="_blank" rel="noreferrer">Repo</a>
+              <button class="btn small toggle-details" data-target="p3-details" type="button">Project details</button>
+              <a class="btn small ghost" href="https://github.com/nuston/customer-sales-analysis" target="_blank" rel="noreferrer">GitHub repo</a>
+            </div>
+
+            <div class="details" id="p3-details" hidden>
+              <p class="muted">
+                Add your “Business Context / Purpose / Outcomes / Dashboard” here (same structure as Project 1).
+              </p>
             </div>
           </article>
 
           <!-- Project 4 -->
-          <article class="card">
+          <article class="card" id="p4">
             <div class="card-top">
-              <h3>Delivery Operations Analysis</h3>
-              <p class="muted">Delivery performance insights focused on efficiency, delays, and reliability.</p>
+              <h3>Delivery Operation Analysis</h3>
+              <p class="muted">Delivery performance analysis focused on efficiency, delays, and reliability.</p>
             </div>
 
-            <ul class="bullets">
-              <li>Analysed on-time delivery rate and lead times.</li>
-              <li>Flagged delay drivers by route/region/time window.</li>
-              <li>Recommended process improvements based on evidence.</li>
-            </ul>
+            <div class="tags">
+              <span class="tag">Logistics</span>
+              <span class="tag">Delivery</span>
+              <span class="tag">Efficiency</span>
+            </div>
 
             <div class="actions">
-              <a class="btn small" href="https://github.com/nuston/Delivery-operation-analysis" target="_blank" rel="noreferrer">Open Project</a>
-              <a class="btn small ghost" href="https://github.com/nuston/Delivery-operation-analysis" target="_blank" rel="noreferrer">Repo</a>
+              <button class="btn small toggle-details" data-target="p4-details" type="button">Project details</button>
+              <a class="btn small ghost" href="https://github.com/nuston/Delivery-operation-analysis" target="_blank" rel="noreferrer">GitHub repo</a>
+            </div>
+
+            <div class="details" id="p4-details" hidden>
+              <p class="muted">
+                Add your “Business Context / Purpose / Outcomes / Dashboard” here (same structure as Project 1).
+              </p>
             </div>
           </article>
 
@@ -154,8 +222,8 @@
 
         <div class="note">
           <p class="muted">
-            Next step: send me the direct links to your files (e.g., notebook, .sql, .xlsx, .pbix, dashboard screenshot),
-            and I’ll add clickable tool badges under each project.
+            To link your dashboard PDF: upload it into your repo (example path used above)
+            and update the <strong>Dashboard (PDF)</strong> href.
           </p>
         </div>
       </div>
@@ -204,10 +272,8 @@
         </div>
 
         <div class="contact-card">
-          <!-- Replace these two when ready -->
           <p><strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a></p>
           <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noreferrer">Add your LinkedIn URL</a></p>
-
           <p><strong>GitHub:</strong> <a href="https://github.com/nuston" target="_blank" rel="noreferrer">github.com/nuston</a></p>
         </div>
 
@@ -218,9 +284,6 @@
     </section>
   </main>
 
-  <script src="port.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
