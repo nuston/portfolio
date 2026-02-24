@@ -1,13 +1,25 @@
+/* =========================
+   AMDARI-LIKE THEME (LIGHT + TEAL ACCENT)
+   ========================= */
+
 :root{
-  /* AMDARI-like light theme */
-  --bg:#F3F6F8;
-  --text:#1F2937;
-  --muted:#6B7280;
-  --card:#FFFFFF;
-  --border:#E5E7EB;
-  --accent:#0E7490;          /* teal accent */
-  --accentSoft:#E6F6F8;
-  --shadow: 0 10px 26px rgba(17, 24, 39, .08);
+  /* Base */
+  --bg:#F3F6F8;                 /* soft app background */
+  --surface:#FFFFFF;            /* cards */
+  --surface2:#F9FAFB;           /* subtle alt surfaces */
+  --text:#111827;               /* main text */
+  --muted:#6B7280;              /* secondary text */
+  --border:#E5E7EB;             /* borders */
+
+  /* AMDARI-like accent (teal/green) */
+  --accent:#0E7490;             /* teal */
+  --accent2:#10B981;            /* green (for subtle highlights) */
+  --accentSoft:#E6F6F8;         /* teal tint */
+  --accentSoft2:#E7F9F1;        /* green tint */
+
+  /* Effects */
+  --shadow: 0 10px 28px rgba(17, 24, 39, .08);
+  --shadow2: 0 14px 34px rgba(17, 24, 39, .12);
   --radius: 16px;
 }
 
@@ -16,23 +28,29 @@ html,body{ margin:0; padding:0; }
 
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background: linear-gradient(180deg, #F3F6F8 0%, #EEF2F4 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, #EEF2F4 100%);
   color: var(--text);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-a{ color: inherit; text-decoration: none; }
+/* Links */
+a{ color: var(--accent); text-decoration: none; }
 a:hover{ text-decoration: underline; }
 
+/* Layout */
 .container{ width: min(1100px, 92vw); margin: 0 auto; }
 
-/* Header */
+/* =========================
+   HEADER (like AMDARI app top bar)
+   ========================= */
 .site-header{
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255,255,255,.85);
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -44,8 +62,12 @@ a:hover{ text-decoration: underline; }
   gap: 16px;
 }
 
-.logo{ font-weight: 800; letter-spacing: .2px; }
+.logo{
+  font-weight: 800;
+  letter-spacing: .2px;
+}
 
+/* Navigation buttons / chips */
 .nav{
   display:flex;
   gap: 12px;
@@ -53,45 +75,62 @@ a:hover{ text-decoration: underline; }
   flex-wrap: wrap;
 }
 
-/* Buttons */
+/* =========================
+   BUTTONS (teal/green like AMDARI)
+   ========================= */
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding: 10px 14px;
+  padding: 10px 16px;
   border-radius: 999px;
-  background: var(--accent);
-  color:#fff;
   border: 1px solid transparent;
   cursor: pointer;
-  font-weight: 600;
-  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-  box-shadow: 0 8px 18px rgba(14,116,144,.18);
+  font-weight: 700;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 10px 18px rgba(14,116,144,.18);
 }
 
 .btn:hover{
   text-decoration:none;
   background: #0B5F74;
   transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(14,116,144,.24);
+  box-shadow: 0 14px 22px rgba(14,116,144,.22);
 }
 
+.btn:active{ transform: translateY(0); }
+
+.btn.small{ padding: 8px 12px; font-size: .95rem; }
+
+/* “ghost” buttons (like AMDARI filter pills) */
 .btn.ghost{
-  background: #fff;
+  background: var(--surface);
   color: var(--text);
   border: 1px solid var(--border);
   box-shadow: none;
 }
 
 .btn.ghost:hover{
-  background: #F9FAFB;
-  transform: translateY(-1px);
+  background: var(--surface2);
+  border-color: #D1D5DB;
 }
 
-.btn.small{ padding: 8px 12px; font-size: .95rem; }
+/* Secondary accent (green) if you want one button to stand out */
+.btn.success{
+  background: var(--accent2);
+  box-shadow: 0 10px 18px rgba(16,185,129,.18);
+}
+.btn.success:hover{
+  background: #0EA371;
+  box-shadow: 0 14px 22px rgba(16,185,129,.22);
+}
 
-/* Hero */
-.hero{ padding: 56px 0 18px; }
+/* =========================
+   HERO / PAGE TOP
+   ========================= */
+.hero{ padding: 54px 0 18px; }
 
 .hero-inner{
   display:grid;
@@ -100,12 +139,17 @@ a:hover{ text-decoration: underline; }
   align-items:start;
 }
 
-.eyebrow{ color: var(--muted); margin: 0 0 10px; }
+.eyebrow{
+  color: var(--muted);
+  margin: 0 0 10px;
+  font-weight: 600;
+}
 
 h1{
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.1;
   margin: 0 0 12px;
+  letter-spacing: -0.02em;
 }
 
 .lead{
@@ -116,8 +160,9 @@ h1{
 
 .hero-cta{ display:flex; gap: 10px; flex-wrap: wrap; }
 
+/* Right-side hero card */
 .hero-card{
-  background: var(--card);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px;
@@ -125,9 +170,16 @@ h1{
 }
 
 .hero-card h2{ margin: 0 0 10px; font-size: 1.15rem; }
-.checklist{ margin: 0; padding-left: 18px; color: var(--muted); }
 
-/* Stats */
+.checklist{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+/* =========================
+   STATS (like dashboard tiles)
+   ========================= */
 .quick-stats{
   margin-top: 18px;
   display:grid;
@@ -136,17 +188,19 @@ h1{
 }
 
 .stat{
-  background: var(--card);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 12px;
-  box-shadow: 0 10px 24px rgba(17, 24, 39, .06);
+  box-shadow: 0 12px 22px rgba(17,24,39,.06);
 }
 
-.stat-num{ font-weight: 800; }
+.stat-num{ font-weight: 900; }
 .stat-label{ color: var(--muted); font-size: .92rem; }
 
-/* Sections */
+/* =========================
+   SECTIONS
+   ========================= */
 .section{ padding: 44px 0; }
 
 .section.alt{
@@ -155,6 +209,7 @@ h1{
   border-bottom: 1px solid var(--border);
 }
 
+/* Section header */
 .section-head{
   display:flex;
   align-items:flex-end;
@@ -163,10 +218,17 @@ h1{
   margin-bottom: 18px;
 }
 
-.section-head h2{ margin: 0; font-size: 1.55rem; }
+.section-head h2{
+  margin: 0;
+  font-size: 1.55rem;
+  letter-spacing: -0.01em;
+}
+
 .muted{ color: var(--muted); }
 
-/* Grid + Cards */
+/* =========================
+   GRID + CARDS (AMDARI feel)
+   ========================= */
 .grid{
   display:grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -174,7 +236,7 @@ h1{
 }
 
 .card{
-  background: var(--card);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px;
@@ -182,29 +244,45 @@ h1{
   display:flex;
   flex-direction:column;
   gap: 12px;
-  transition: transform .15s ease, box-shadow .15s ease;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
 
 .card:hover{
   transform: translateY(-3px);
-  box-shadow: 0 16px 34px rgba(17, 24, 39, .12);
+  box-shadow: var(--shadow2);
+  border-color: #D1D5DB;
 }
 
-.card-top h3{ margin: 0 0 6px; line-height: 1.2; }
+.card-top h3{
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
 
-/* Tags */
+/* =========================
+   TAGS / PILLS (teal chip like AMDARI)
+   ========================= */
 .tags{ display:flex; flex-wrap: wrap; gap: 8px; }
 
 .tag{
   font-size: .85rem;
   padding: 6px 10px;
   border-radius: 999px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(14,116,144,.18);
   background: var(--accentSoft);
   color: #0B5F74;
+  font-weight: 700;
 }
 
-/* Actions */
+/* Green variant (for “Completed”, “Live”, etc.) */
+.tag.success{
+  border-color: rgba(16,185,129,.20);
+  background: var(--accentSoft2);
+  color: #0EA371;
+}
+
+/* =========================
+   ACTIONS
+   ========================= */
 .actions{
   display:flex;
   gap: 10px;
@@ -212,7 +290,9 @@ h1{
   margin-top: 4px;
 }
 
-/* Details */
+/* =========================
+   DETAILS PANEL
+   ========================= */
 .details{
   margin-top: 10px;
   padding-top: 12px;
@@ -228,17 +308,27 @@ h1{
 }
 
 .details-nav a{
-  padding: 6px 10px;
+  padding: 7px 12px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: #F9FAFB;
+  background: var(--surface2);
   text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Active tab/pill style */
+.details-nav a.active{
+  background: var(--accentSoft);
+  border-color: rgba(14,116,144,.25);
+  color: #0B5F74;
 }
 
 .details-nav a:hover{
   background: #F3F4F6;
 }
 
+/* Headings inside details */
 .details-section h4{
   margin: 12px 0 6px;
   color: var(--text);
@@ -253,45 +343,46 @@ h1{
   flex-wrap: wrap;
 }
 
-/* Note */
+/* =========================
+   NOTE
+   ========================= */
 .note{
   margin-top: 14px;
   padding: 12px 14px;
   border: 1px dashed #CBD5E1;
   border-radius: 14px;
-  background: #FFFFFF;
+  background: var(--surface);
 }
 
-/* Skills pills */
+/* =========================
+   SKILLS PILLS
+   ========================= */
 .skill-grid{ display:flex; flex-wrap: wrap; gap: 10px; }
 
 .pill{
   padding: 10px 12px;
   border-radius: 999px;
-  background: #FFFFFF;
+  background: var(--surface);
   border: 1px solid var(--border);
   color: var(--muted);
-  box-shadow: 0 10px 22px rgba(17, 24, 39, .06);
+  font-weight: 700;
+  box-shadow: 0 12px 22px rgba(17,24,39,.06);
 }
 
-/* About/Contact blocks */
-.about{
-  background: var(--card);
+/* =========================
+   ABOUT / CONTACT CARDS
+   ========================= */
+.about, .contact-card{
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px;
   box-shadow: var(--shadow);
 }
 
-.contact-card{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow);
-}
-
-/* Footer */
+/* =========================
+   FOOTER
+   ========================= */
 .footer{
   margin-top: 18px;
   padding-top: 10px;
@@ -300,6 +391,9 @@ h1{
   color: var(--muted);
 }
 
+/* =========================
+   MOBILE
+   ========================= */
 @media (max-width: 860px){
   .hero-inner{ grid-template-columns: 1fr; }
   .grid{ grid-template-columns: 1fr; }
